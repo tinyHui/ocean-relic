@@ -1,5 +1,13 @@
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.tsx'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import '@/index.css'
+import { App } from '@/app.tsx'
 
-render(<App />, document.getElementById('app')!)
+const rootElement = document.getElementById('app') as HTMLElement
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  rootElement,
+)
